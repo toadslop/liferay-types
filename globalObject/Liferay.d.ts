@@ -6,6 +6,7 @@ import { Data } from "./Data";
 import { Dependency } from "./Dependency";
 import { DOMTaskRunner } from "./DOMTaskRunner";
 import { Language } from "./Language";
+import { LayoutExplorer } from "./LayoutExporter";
 
 export type Liferay = {
   AUI: AUI;
@@ -21,4 +22,5 @@ export type Liferay = {
   EXPOSE_GLOBAL: boolean;
   Form: () => void;
   Language: Language;
+  LayoutExplorer: LayoutExplorer;
 };
