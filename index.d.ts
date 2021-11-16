@@ -22,3 +22,7 @@ export type Liferay = {
   Form: () => void;
   Language: Language;
 };
+
+declare global {
+  const Liferay: Liferay;
+}
