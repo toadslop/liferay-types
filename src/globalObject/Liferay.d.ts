@@ -7,11 +7,13 @@ import { Dependency } from "./Dependency";
 import { DOMTaskRunner } from "./DOMTaskRunner";
 import { Language } from "./Language";
 import { LayoutExplorer } from "./LayoutExporter";
+import { Notice } from "./Notice";
+import { Service } from "./Service";
 
 export type Liferay = {
   AUI: AUI;
   Address: Address;
-  Alert: (...args: unknown[]) => unknown; // TODO: fix this typedef
+  Alert: (...args: unknown[]) => void; // TODO: fix this typedef
   BREAKPOINTS: { PHONE: number; TABLET: number };
   Browser: Browser;
   BrowserSelectors: BrowserSelectors;
@@ -20,7 +22,13 @@ export type Liferay = {
   Dependency: Dependency;
   EXPLAIN_RESOLUTIONS: boolean;
   EXPOSE_GLOBAL: boolean;
-  Form: () => void;
+  Form: (...args: unknown[]) => void;
   Language: Language;
   LayoutExplorer: LayoutExplorer;
+  Loader: object;
+  Menu: (...args: unknown[]) => void;
+  NavigationInteraction: (...args: unknown[]) => void;
+  Notice: Notice;
+  Notification: (...args: unknown[]) => void;
+  Service: Service;
 };
