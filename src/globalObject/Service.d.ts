@@ -1,12 +1,12 @@
 import { errorCallback, successCallback } from "../../api";
 
-type Service = (
+export type Service = (
   service: string,
   data?: object | HTMLElement | string,
   successCallback?: successCallback,
   exceptionCallback?: errorCallback
 ) => void;
-type Service = (
+export type Service = (
   service: BatchRequest,
   successCallback: successCallback,
   exceptionCallback: errorCallback

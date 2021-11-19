@@ -3,10 +3,10 @@
   "version": "7.2.10",
   "description": "Typescript types for Liferay's global JavaScript object and backend models.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "./index.d.ts",
   "keywords": [
     "liferay",
     "typescript",
