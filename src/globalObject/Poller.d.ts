@@ -1,5 +1,5 @@
 export type Poller = {
-  addListener: (key: string, listener: listener, scope: unknown) => void;
+  addListener: (key: string, listener: Listener, scope: unknown) => void;
   cancelCustomDelay: () => void;
   getDelay: () => number;
   getReceiveUrl: () => string;
@@ -8,7 +8,7 @@ export type Poller = {
   isSupportsComet: () => boolean;
 };
 
-export type listener = (event: Event) => void;
+export type Listener = (event: Event) => void;
 export type InitPollerOptions = {
   encryptedUserId: string;
   supportsComet: boolean;

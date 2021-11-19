@@ -5,5 +5,5 @@ export type Language = {
   direction: {
     [index: string]: string;
   };
-  get: (...args: string[]) => string;
+  get: (key: string) => string;
 };

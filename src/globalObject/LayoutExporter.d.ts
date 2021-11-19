@@ -15,11 +15,11 @@ export type LayoutOptions = {
   obj: {
     checked: boolean;
   };
-  pane: Pane;
+  pane: LayloutExplorerPane;
 };
 
 export type DetailsOptions = {
-  detail: Pane;
+  detail: LayloutExplorerPane;
   toggle: unknown; // TODO find proper type for toggle
 };
 
@@ -39,7 +39,7 @@ export type PublishToLiveOptions = {
   url: string;
 };
 
-export type Pane = {
+export type LayloutExplorerPane = {
   hasClass: (className: string) => boolean;
   show: () => void;
   hide: () => void;
