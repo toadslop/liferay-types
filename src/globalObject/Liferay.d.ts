@@ -31,4 +31,10 @@ export type Liferay = {
   Notice: Notice;
   Notification: (...args: unknown[]) => void;
   Service: Service;
+  fire: (type: string, data?: object, options?: object) => void;
+  on: (
+    type: string | Array | object | function,
+    fn?: function,
+    context?: object
+  ) => void;
 };
