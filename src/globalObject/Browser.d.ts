@@ -1,6 +1,6 @@
 export type Browser = {
   acceptsGzip: () => boolean;
-  getMajorVersion: number;
+  getMajorVersion: () => number;
   getRevision: () => string;
   getVersion: () => string;
   isAir: () => boolean;
