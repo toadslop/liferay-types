@@ -1,5 +1,5 @@
 {
-  "name": "liferay",
+  "name": "liferay-types",
   "version": "7.2.10",
   "description": "Typescript types for Liferay's global JavaScript object and backend models.",
   "main": "index.js",
