@@ -6,7 +6,7 @@ type Service = (
   successCallback?: successCallback,
   exceptionCallback?: errorCallback
 ) => void;
-export type Service = (
+type Service = (
   service: BatchRequest,
   successCallback: successCallback,
   exceptionCallback: errorCallback
