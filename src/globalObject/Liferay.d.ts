@@ -8,6 +8,9 @@ import { DOMTaskRunner } from "./DOMTaskRunner";
 import { Language } from "./Language";
 import { LayoutExplorer } from "./LayoutExporter";
 import { Notice } from "./Notice";
+import { Poller } from "./Poller";
+import { Portal } from "./Portal";
+import { Portlet } from "./Portlet";
 import { Service } from "./Service";
 
 export type Liferay = {
@@ -17,6 +20,9 @@ export type Liferay = {
   BREAKPOINTS: { PHONE: number; TABLET: number };
   Browser: Browser;
   BrowserSelectors: BrowserSelectors;
+  ControlMenu: {
+    init: (containerId: string) => void;
+  };
   DOMTaskRunner: DOMTaskRunner;
   Data: Data;
   Dependency: Dependency;
@@ -26,10 +32,15 @@ export type Liferay = {
   Language: Language;
   LayoutExplorer: LayoutExplorer;
   Loader: object;
+  LogoSelector: (...args: unknown) => void;
   Menu: (...args: unknown[]) => void;
+  MenuFilter: (...args: unknown[]) => void;
   NavigationInteraction: (...args: unknown[]) => void;
   Notice: Notice;
   Notification: (...args: unknown[]) => void;
+  Poller: Poller;
+  Portal: Portal;
+  Portlet: Portlet;
   Service: Service;
   fire: (type: string, data?: object, options?: object) => void;
   on: (
