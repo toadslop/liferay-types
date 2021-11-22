@@ -1,11 +1,12 @@
 import { Liferay } from "./src/globalObject/Liferay";
 
-declare namespace Liferay {
-  declare global {
-    export const Liferay: Liferay;
-  }
+declare global {
+  export const Liferay: Liferay;
+}
 
-  export type BatchRequest = import("./src/globalObject/Service").BatchRequest;
+declare namespace Liferay {
+  export type RequestObject =
+    import("./src/globalObject/Service").RequestObject;
   export type EventFacade = import("./src/events/EventFacade").EventFacade;
   export type DOMTaskAction =
     import("./src/globalObject/DOMTaskRunner").DOMTaskAction;

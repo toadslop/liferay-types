@@ -11,7 +11,7 @@ import { Notice } from "./Notice";
 import { Poller } from "./Poller";
 import { Portal } from "./Portal";
 import { Portlet } from "./Portlet";
-import { Service } from "./Service";
+import { Service, ServiceBatch, ServiceSingle } from "./Service";
 
 export type Liferay = {
   AUI: AUI;
