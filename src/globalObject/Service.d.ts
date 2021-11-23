@@ -1,4 +1,4 @@
-import { errorCallback, successCallback } from "../../api";
+import { errorCallback, successCallback } from "../api";
 
 export type Service = (
   service: string | RequestObject<T> | RequestObject<T>[],

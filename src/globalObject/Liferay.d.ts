@@ -12,6 +12,7 @@ import { Poller } from "./Poller";
 import { Portal } from "./Portal";
 import { Portlet } from "./Portlet";
 import { Service, ServiceBatch, ServiceSingle } from "./Service";
+import { ThemeDisplay } from "./ThemeDisplay";
 
 export type Liferay = {
   AUI: AUI;
@@ -42,6 +43,7 @@ export type Liferay = {
   Portal: Portal;
   Portlet: Portlet;
   Service: Service;
+  ThemeDisplay: ThemeDisplay;
   fire: (type: string, data?: object, options?: object) => void;
   on: (
     type: string | Array | object | function,

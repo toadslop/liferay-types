@@ -1,5 +1,4 @@
 export type AUI = {
-  getAvailableLangPath: () => string;
   getCombine: () => boolean;
   getComboPath: () => string;
   getDateFormat: () => string;
@@ -7,7 +6,6 @@ export type AUI = {
   getFilter: () => string;
   getFilterConfig: () => object | null;
   getJavaScriptRootPath: () => string;
-  getLangPath: () => string;
   getPortletRootPath: () => string;
   getStaticResourceURLParams: () => string;
 };

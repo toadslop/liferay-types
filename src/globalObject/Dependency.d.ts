@@ -1,8 +1,3 @@
 export type Dependency = {
-  provide: (
-    obj: object,
-    methodName: string,
-    methodFn: function,
-    proto: object
-  ) => void;
+  provide: (a: unknown, i: unknown, n: unknown, p: unknown, t: unknown) => void; // TODO: Complete this typedef
 };

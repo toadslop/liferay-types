@@ -1,4 +1,4 @@
-import { successCallback } from "../../api";
+import { successCallback } from "../api";
 import { Country, Region } from "../models/models";
 
 export type Address = {

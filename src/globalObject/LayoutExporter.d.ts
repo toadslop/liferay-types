@@ -10,37 +10,39 @@ export type LayoutExplorer = {
   selected: (options: LayoutOptions) => void;
 };
 
-export type LayoutOptions = {
-  // TODO: find complete typedef for AllOptions
-  obj: {
-    checked: boolean;
-  };
-  pane: LayloutExplorerPane;
-};
+declare namespace LayoutExplorer {
+  export interface LayoutOptions {
+    // TODO: find complete typedef for AllOptions
+    obj: {
+      checked: boolean;
+    };
+    pane: LayloutExplorerPane;
+  }
 
-export type DetailsOptions = {
-  detail: LayloutExplorerPane;
-  toggle: unknown; // TODO find proper type for toggle
-};
+  export interface DetailsOptions {
+    detail: LayloutExplorerPane;
+    toggle: unknown; // TODO find proper type for toggle
+  }
 
-export type ProposeLayoutOptions = {
-  namespace: string;
-  reviewers: Reviewer[];
-  url: string;
-};
+  export interface ProposeLayoutOptions {
+    namespace: string;
+    reviewers: Reviewer[];
+    url: string;
+  }
 
-export type Reviewer = {
-  userId: string | number;
-  fullname: string;
-};
+  export interface Reviewer {
+    userId: string | number;
+    fullname: string;
+  }
 
-export type PublishToLiveOptions = {
-  title: string;
-  url: string;
-};
+  export interface PublishToLiveOptions {
+    title: string;
+    url: string;
+  }
 
-export type LayloutExplorerPane = {
-  hasClass: (className: string) => boolean;
-  show: () => void;
-  hide: () => void;
-};
+  export interface LayloutExplorerPane {
+    hasClass: (className: string) => boolean;
+    show: () => void;
+    hide: () => void;
+  }
+}

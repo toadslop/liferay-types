@@ -5,13 +5,15 @@ export type DOMTaskRunner = {
   runTask: (node: HTMLElement) => void;
 };
 
-export type DOMTaskAction = {
-  action: (state: object, params: object, node: HTMLElement) => void;
-  condition: (state: object, params: object, node: HTMLElement) => boolean;
-  params: object;
-};
+declare namespace DOMTaskRunner {
+  type DOMTaskAction = {
+    action: (state: object, params: object, node: HTMLElement) => void;
+    condition: (state: object, params: object, node: HTMLElement) => boolean;
+    params: object;
+  };
 
-export type DOMTaskState = {
-  data: object;
-  owner: string;
-};
+  type DOMTaskState = {
+    data: object;
+    owner: string;
+  };
+}
