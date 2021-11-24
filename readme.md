@@ -9,7 +9,7 @@ Again, please put in a pull request! And be sure to add your name to the authors
 ## How to use this
 
 ```
-npm install liferay-types
+npm install --save-dev liferay-types
 ```
 
 In your tsconfig.json, update your include tag as follows:
