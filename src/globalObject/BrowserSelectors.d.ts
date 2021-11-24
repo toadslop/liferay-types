@@ -1,4 +1,6 @@
-export type BrowserSelectors = {
-  getSelectors: () => string;
-  run: () => void;
-};
+declare namespace Liferay {
+  namespace BrowserSelectors {
+    function getSelectors(): string;
+    function run(): void;
+  }
+}

@@ -1,12 +1,38 @@
-import { errorCallback, successCallback } from "../api";
+// import { errorCallback, successCallback } from "../api";
 
-export type Service = (
-  service: string | RequestObject<T> | RequestObject<T>[],
-  data?: object | HTMLElement | string,
-  successCallback?: successCallback,
-  exceptionCallback?: errorCallback
-) => void;
+declare namespace Liferay {
+  function Service(
+    requestObject: RequestObject<T>,
+    successCallback: ServicsSuccessCallback,
+    exceptionCallback: ServiceExceptionCallback
+  );
+  function Service(
+    requestObject: RequestObject<T>[],
+    successCallback: ServicsSuccessCallback,
+    exceptionCallback: ServiceExceptionCallback
+  );
+  function Service(
+    service: string,
+    formElement: HTMLElement,
+    successCallback: ServicsSuccessCallback<T>,
+    exceptionCallback: ServiceExceptionCallback
+  ): void;
+  function Service(
+    service: string,
+    formId: string,
+    successCallback: ServicsSuccessCallback<T>,
+    exceptionCallback: ServiceExceptionCallback
+  ): void;
+  function Service(
+    service: string,
+    requestData: object,
+    successCallback: ServicsSuccessCallback<T>,
+    exceptionCallback: ServiceExceptionCallback
+  ): void;
 
-export type RequestObject<T> = {
-  [key: string]: T | HTMLElement | string;
-};
+  type ServicsSuccessCallback<T> = (response: T[]) => void;
+  type ServiceExceptionCallback = (error: string) => void;
+  type RequestObject<T extends object> = {
+    [endpoint: string]: T | HTMLElement | string;
+  };
+}

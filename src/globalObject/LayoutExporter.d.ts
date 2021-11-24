@@ -1,48 +1,48 @@
-export type LayoutExplorer = {
-  all: (options: LayoutOptions) => void;
-  details: (options: object) => void;
-  icons: {
-    minus: string;
-    plus: string;
-  };
-  proposeLayout: (options: ProposeLayoutOptions) => void;
-  publishToLive: (options: PublishToLiveOptions) => void;
-  selected: (options: LayoutOptions) => void;
-};
-
-declare namespace LayoutExplorer {
-  export interface LayoutOptions {
-    // TODO: find complete typedef for AllOptions
-    obj: {
-      checked: boolean;
+declare namespace Liferay {
+  namespace LayoutExporter {
+    function all(options: LayoutOptions): void;
+    function details(options: object): void; // TODO: determine proper options for this function.
+    const icons: {
+      minus: string;
+      plus: string;
     };
-    pane: LayloutExplorerPane;
-  }
+    function proposeLayout(options: ProposeLayoutOptions): void;
+    function publishToLive(options: PublishToLiveOptions): void;
+    function selected(options: LayoutOptions): void;
 
-  export interface DetailsOptions {
-    detail: LayloutExplorerPane;
-    toggle: unknown; // TODO find proper type for toggle
-  }
+    interface LayoutOptions {
+      // TODO: find complete typedef for AllOptions
+      obj: {
+        checked: boolean;
+      };
+      pane: LayloutExplorerPane;
+    }
 
-  export interface ProposeLayoutOptions {
-    namespace: string;
-    reviewers: Reviewer[];
-    url: string;
-  }
+    interface DetailsOptions {
+      detail: LayloutExplorerPane;
+      toggle: unknown; // TODO find proper type for toggle
+    }
 
-  export interface Reviewer {
-    userId: string | number;
-    fullname: string;
-  }
+    interface ProposeLayoutOptions {
+      namespace: string;
+      reviewers: Reviewer[];
+      url: string;
+    }
 
-  export interface PublishToLiveOptions {
-    title: string;
-    url: string;
-  }
+    interface Reviewer {
+      userId: string | number;
+      fullname: string;
+    }
 
-  export interface LayloutExplorerPane {
-    hasClass: (className: string) => boolean;
-    show: () => void;
-    hide: () => void;
+    interface PublishToLiveOptions {
+      title: string;
+      url: string;
+    }
+
+    interface LayloutExplorerPane {
+      hasClass: (className: string) => boolean;
+      show: () => void;
+      hide: () => void;
+    }
   }
 }

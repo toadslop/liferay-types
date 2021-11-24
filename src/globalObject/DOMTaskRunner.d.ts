@@ -1,19 +1,19 @@
-export type DOMTaskRunner = {
-  addTask: (action: DOMTaskAction) => void;
-  addTaskState: (state: DOMTaskState) => void;
-  reset: () => void;
-  runTask: (node: HTMLElement) => void;
-};
+declare namespace Liferay {
+  namespace DOMTaskRunner {
+    function addTask(action: DOMTaskAction): void;
+    function addTaskState(state: DOMTaskState): void;
+    function reset(): void;
+    function runTask(node: HTMLElement): void;
 
-declare namespace DOMTaskRunner {
-  type DOMTaskAction = {
-    action: (state: object, params: object, node: HTMLElement) => void;
-    condition: (state: object, params: object, node: HTMLElement) => boolean;
-    params: object;
-  };
+    interface DOMTaskAction {
+      action: (state: object, params: object, node: HTMLElement) => void;
+      condition: (state: object, params: object, node: HTMLElement) => boolean;
+      params: object;
+    }
 
-  type DOMTaskState = {
-    data: object;
-    owner: string;
-  };
+    interface DOMTaskState {
+      data: object;
+      owner: string;
+    }
+  }
 }

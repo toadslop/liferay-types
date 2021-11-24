@@ -1,9 +1,11 @@
-export type Language = {
-  available: {
-    [index: string]: string;
-  };
-  direction: {
-    [index: string]: string;
-  };
-  get: (key: string) => string;
-};
+declare namespace Liferay {
+  namespace Language {
+    const available: {
+      [index: string]: string;
+    };
+    const direction: {
+      [index: string]: string;
+    };
+    function get(key: string): string;
+  }
+}

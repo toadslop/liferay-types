@@ -1,3 +1,3 @@
-export type ThemeDisplay = {
-  getCDNBaseURL: () => string;
-};
+// export type ThemeDisplay = {
+//   getCDNBaseURL: () => string;
+// };

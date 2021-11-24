@@ -1,23 +1,25 @@
-export type Browser = {
-  acceptsGzip: () => boolean;
-  getMajorVersion: () => number;
-  getRevision: () => string;
-  getVersion: () => string;
-  isAir: () => boolean;
-  isChrome: () => boolean;
-  isEdge: () => boolean;
-  isFirefox: () => boolean;
-  isGecko: () => boolean;
-  isIe: () => boolean;
-  isIphone: () => boolean;
-  isLinux: () => boolean;
-  isMac: () => boolean;
-  isMobile: () => boolean;
-  isMozilla: () => boolean;
-  isOpera: () => boolean;
-  isRtf: () => boolean;
-  isSafari: () => boolean;
-  isSun: () => boolean;
-  isWebKit: () => boolean;
-  isWindows: () => boolean;
-};
+declare namespace Liferay {
+  namespace Browser {
+    function acceptsGzip(): boolean;
+    function getMajorVersion(): number;
+    function getRevision(): string;
+    function getVersion(): string;
+    function isAir(): boolean;
+    function isChrome(): boolean;
+    function isEdge(): boolean;
+    function isFirefox(): boolean;
+    function isGecko(): boolean;
+    function isIe(): boolean;
+    function isIphone(): boolean;
+    function isLinux(): boolean;
+    function isMac(): boolean;
+    function isMobile(): boolean;
+    function isMozilla(): boolean;
+    function isOpera(): boolean;
+    function isRtf(): boolean;
+    function isSafari(): boolean;
+    function isSun(): boolean;
+    function isWebKit(): boolean;
+    function isWindows(): boolean;
+  }
+}

@@ -1,7 +1,9 @@
-import { successCallback } from "../api";
-import { Country, Region } from "../models/models";
-
-export type Address = {
-  getCountries: (callback: successCallback<Country>) => void;
-  getRegions: (callback: successCallback<Region>, selectKey: string) => void;
-};
+declare namespace Liferay {
+  namespace Address {
+    function getCountries(callback: ServiceCallback<Country>): void;
+    function getRegions(
+      callback: ServicsSuccessCallback<Region>,
+      selectKey: string
+    ): void;
+  }
+}

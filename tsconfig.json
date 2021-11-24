@@ -21,6 +21,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "files": ["index.d.ts"],
+  "files": ["src/index.d.ts"],
   "include": ["src/**/*"]
 }

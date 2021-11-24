@@ -1,0 +1,14 @@
+declare namespace Liferay {
+  namespace STATUS_CODE {
+    const BAD_REQUEST: 400;
+    const INTERNAL_SERVER_ERROR: 500;
+    const OK: 200;
+    const SC_DUPLICATE_FILE_EXCEPTION: 490;
+    const SC_FILE_ANTIVIRUS_EXCEPTION: 494;
+    const SC_FILE_CUSTOM_EXCEPTION: 499;
+    const SC_FILE_EXTENSION_EXCEPTION: 491;
+    const SC_FILE_NAME_EXCEPTION: 492;
+    const SC_FILE_SIZE_EXCEPTION: 493;
+    const SC_UPLOAD_REQUEST_SIZE_EXCEPTION: 495;
+  }
+}
